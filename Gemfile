@@ -45,6 +45,7 @@ gem 'devise-i18n'
 gem 'paperclip'
 gem 'toastr-rails'
 gem 'rails-i18n'
+gem 'font-awesome-sass'
 
 # Use Capistrano for deployment
 # gem 'capistrano-rails', group: :development
