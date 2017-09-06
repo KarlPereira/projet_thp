@@ -29,7 +29,7 @@ class RoomsController < ApplicationController
             end
        end
             @photos = @room.photos
-            redirect_to edit_room_path(@room), notice:"Votre logement a été ajouté" #redirige vers la page de l’annonce et notifie l’utilisateur de la réussite de la création
+            redirect_to room_path(@room), notice:"Votre logement a été ajouté" #redirige vers la page de l’annonce et notifie l’utilisateur de la réussite de la création
       else
            render :new # s’il y a une erreur, redirige vers la page de création new
       end
