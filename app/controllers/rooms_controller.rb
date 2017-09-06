@@ -55,7 +55,7 @@ class RoomsController < ApplicationController
             end
        end
             @photos = @room.photos
-            redirect_to edit_room_path(@room), notice:"Modification enregistrée..."
+            redirect_to room_path(@room), notice:"Modification enregistrée..."
             
         else
             render :edit
