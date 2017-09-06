@@ -1,12 +1,12 @@
 <div class="panel panel-default">
     <div class="panel-heading">
-        Devenez hôte Fullroom
+        Devenez hôte FullRoom
     </div>
     <div class="panel-body">
         <div class="container">
             
-            <%= form_for @room do |f| %>
-             <%= render 'shared/errors' %> 
+            <%= form_for @room, html: {multipart: true} do |f| %>
+            <%= render 'shared/errors' %>
              
             <div class="row">
                     <div class="col-md-4 select">
@@ -79,7 +79,20 @@
                         <%= f.text_field :address, placeholder: "Où est situé votre logement ?", class: "form-control" %>
                     </div>
                 </div>
-                
+            
+            <div class="row">
+        <!-- bouton pour ajouter des photos -->
+       <div class="col-md-4">
+           <div class="form-group">
+                 <span class="btn btn-default btn-file">
+                 <i class = "fa fa-cloud-upload fa-lg"></i> Téléchargez vos photos !
+                <!-- multiple ajout de photos en même temps -->
+                 <%= file_field_tag "images[]", type: :file, multiple: true %>
+                 </span>
+           </div>
+       </div>
+ </div>
+            <div id="photos"><%= render 'photos/list' %></div>         
             <div class="row">
                 <div class="col-md-4">
                     <div class="form-group">
@@ -138,6 +151,8 @@
                 
             <div class="actions">
                       <%= f.submit "Je valide mon annonce", class: "btn btn-primary"%>
+                    
+                    <!-- poser la question -->
                     <% if controller.action_name == 'edit' && Rails.env.development? %>
                       <br /><br /><br />
                       <%= link_to "Je supprime mon annonce", room_path(@room), method: :delete, data: {confirm: "Supprimer mon annonce?"} %>
@@ -148,3 +163,4 @@
         </div>
     </div>
 </div>
+	
