@@ -11,11 +11,11 @@
 // about supported directives.
 //
 //= require rails-ujs
-//= require turbolinks
 //= require_tree .
 //= require jquery
 //= require bootstrap-sprockets
 //= require toastr
+//= require jquery-ui
 
 toastr.options = {
 
