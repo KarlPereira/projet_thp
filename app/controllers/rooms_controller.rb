@@ -39,6 +39,16 @@ class RoomsController < ApplicationController
     # la méthode show va montrer l'annonce id:X
     def show
         @photos = @room.photos
+        
+        @reviews = @room.reviews
+
+if current_user
+
+      @booked = Reservation.where("room_id = ? AND user_id = ?", @room.id, current_user.id).present? 
+
+      @hasReview = @reviews.find_by(user_id: current_user.id)
+
+end
     end
     
     # la méthode edit va editer l'annonce id:X

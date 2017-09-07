@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  get 'reviews/show'
+
   get 'rooms/create'
 
   get 'rooms/update'
@@ -20,7 +22,7 @@ Rails.application.routes.draw do
   resources :users, only: [:show]
   
   resources :rooms do
-  resources :reservations, only: [:create]
+  resources :reservations, only: [:create, :destroy]
    end
    
   resources :photos
