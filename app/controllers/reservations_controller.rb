@@ -2,6 +2,18 @@ class ReservationsController < ApplicationController
 
 before_action :authenticate_user! 
 
+def your_reservations
+
+      @rooms = current_user.rooms
+
+ end
+
+def your_trips
+
+       @trips = current_user.reservations 
+
+ end
+
 def preload
        room = Room.find(params[:room_id])
        today = Date.today
