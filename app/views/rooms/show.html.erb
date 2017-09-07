@@ -138,7 +138,7 @@
             <h3>Commentaires <%= @room.average_rating %> (<%= @reviews.count %>)</h3>
             <div class="container">
                 <div>
-                    <%= render 'reviews/form' if @booked && !@hasReview %> # le formulaire apparait seulement si l’utilisateur a déjà reservé des dates sur ce logement et s’il n’a pas déjà note celui-ci…
+                    <%= render 'reviews/form' if @booked && !@hasReview %> <!--# le formulaire apparait seulement si l’utilisateur a déjà reservé des dates sur ce logement et s’il n’a pas déjà note celui-ci…-->
                 </div>
                 <div>
                     <%= render 'reviews/list' %>

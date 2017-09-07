@@ -38,7 +38,7 @@ ActiveRecord::Schema.define(version: 20170907201615) do
 
   create_table "reviews", force: :cascade do |t|
     t.text "comment"
-    t.integer "star"
+    t.integer "star", default: 1
     t.integer "room_id"
     t.integer "user_id"
     t.datetime "created_at", null: false
