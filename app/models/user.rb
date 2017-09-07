@@ -11,5 +11,6 @@ default_url: "/assets/default_image.png"
 validates_attachment_content_type :avatar, content_type: /\Aimage\/.*\Z/
 
 has_many :rooms
+has_many :reservations
 end
 
