@@ -35,6 +35,7 @@ get '/preview' => 'reservations#preview'
 
 get '/your_trips' => 'reservations#your_trips' 
 get '/your_reservations' => 'reservations#your_reservations' 
+get '/search' => 'pages#search' 
 
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 end
