@@ -1,5 +1,7 @@
 {
   "name": "fullroom",
   "private": true,
-  "dependencies": {}
+  "dependencies": {
+    "sticky-kit": "^1.1.3"
+  }
 }

@@ -11,7 +11,7 @@ class PagesController < ApplicationController
       arrResult = Array.new
       
       if session[:fullroom_search] && session[:fullroom_search] != ""
-         @rooms_address = Room.where(active: true).near(session[:aiirbnb_search], 5, order:'distance')
+         @rooms_address = Room.where(active: true).near(session[:fullroom_search], 5, order:'distance')
       else
          @rooms_address = Room.where(active: true).all 
       end
